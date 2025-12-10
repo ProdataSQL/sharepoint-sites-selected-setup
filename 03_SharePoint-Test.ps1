@@ -7,11 +7,13 @@ $ErrorActionPreference = "Stop"
 $ClientId = "b9b25184-7305-4612-89cb-41106bc4d80a"
 $TenantId ="d8ca992a-5fbe-40b2-9b8b-844e198c4c94"
 $Hostname = "prodata365.sharepoint.com"  # Sharepoint Top Level URL 
-$ClientSecret = "xxx"
 $Path = "/sites/Test"                    # Path to the site. Eg /Sites/[Site Name]
-
+$ClientSecret=""
 # Prompt for secret if missing
-
+if (!($ClientSecret)) {
+    $cred = Get-Credential -Message "Enter Client Secret for App Registration [$ClientId]" -UserName "ClientSecret"
+    $ClientSecret = $cred.GetNetworkCredential().Password
+}
 
 $SecureSecret = ConvertTo-SecureString $ClientSecret -AsPlainText -Force
 $Cred = New-Object System.Management.Automation.PSCredential($ClientId, $SecureSecret)

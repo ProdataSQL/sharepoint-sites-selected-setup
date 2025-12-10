@@ -14,7 +14,7 @@ Connect-MgGraph -Scopes "Sites.FullControl.All,Application.Read.All" -UseDeviceC
 $AppId = "b9b25184-7305-4612-89cb-41106bc4d80a"
 $Hostname = "prodata365.sharepoint.com"  # Sharepoint Top Level URL 
 $Path = "/sites/Test"                    # Path to the site. Eg /Sites/[Site Name]
-$roles =@("write")               # Permissions to grant. Can be "read" or "write"
+$role =@("write")               # Permissions to grant. Can be "read" or "write"
 
 
 # Validate Site 
@@ -40,7 +40,7 @@ catch {
 Write-Host("Granting App [$appDisplayName] to Site ID [$SiteId]")
 
 $Body = @{
-    roles = $roles
+    roles = $role
     grantedToIdentities = @(
         @{
             application = @{
