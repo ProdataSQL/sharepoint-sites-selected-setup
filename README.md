@@ -1,8 +1,8 @@
 # Grant App Registration Access to SharePoint using Entra and Graph API
-As you may be awar the legacy method fot granting "apps" access to sharepoint v Graph API is deprecared
+As you may be aware the legacy method fot granting "apps" access to sharepoint v Graph API is deprecared
 https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/add-ins-and-azure-acs-retirements-faq
 
-This repos gives scripts for an updated process.
+This repos gives scripts for an updated process using Entra ID and Powershell.
 
 ### Pre-Requisites
 You must have created an "app registration" and have the following parmaeters:
@@ -19,7 +19,7 @@ Install-Module Microsoft.Graph
 
 
 ### Step 1 Create App Registration and set Graoh API Permisions
-We assuem that this step is probably already done if you are not sure 
+We assume that this step is probably already done if you are not sure 
 how to add an app registration and grant o MS Graph permissions, there is a deck in repos here
 https://github.com/ProdataSQL/sharepoint-sites-selected-setup/blob/main/SharePoint%20SP%20Creation.pptx
 
@@ -41,7 +41,7 @@ https://github.com/ProdataSQL/sharepoint-sites-selected-setup/blob/main/03_Share
 This will prompt for the "Client Secret" and then test access to the SharePoint Site by listing directories.
 <img width="400" height="341" alt="image" src="https://github.com/user-attachments/assets/821ff300-6b14-4cbc-aa2f-bbceb19030a1" />
 
-When run the output should look liek below.
+When run the output should look like below.
 <img width="1153" height="222" alt="image" src="https://github.com/user-attachments/assets/fb573fdb-9d98-48a4-a075-e5e1dd8a1cbf" />
 
 
