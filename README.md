@@ -1,4 +1,4 @@
-# Grant App Registration Access to SharePoint using Entra and Graph API
+# Grant App Permissions to  SharePoint using Entra and Graph API
 As you may be aware the legacy method fot granting "apps" access to sharepoint v Graph API is deprecared
 https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/add-ins-and-azure-acs-retirements-faq
 
